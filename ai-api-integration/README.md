@@ -28,6 +28,13 @@ This project integrates multiple AI APIs including Groq, Ollama, Hugging Face, G
 - Error handling implemented
 - Environment variable usage for security
 
+## Bonus Feature
+
+A unified multi API system is implemented:
+- Allows selecting API
+- Takes user input
+- Returns response dynamically
+
 ## Screenshots
 Outputs of all APIs are included in the screenshots folder.
 
