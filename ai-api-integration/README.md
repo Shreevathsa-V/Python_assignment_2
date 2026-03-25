@@ -10,18 +10,18 @@ This project integrates multiple AI APIs including Groq, Ollama, Hugging Face, G
     pip install -r requirements.txt
 
 3. Create .env file with API keys
-    GROQ_API_KEY=your_key
-    HUGGINGFACE_API_KEY=your_key
-    GOOGLE_API_KEY=your_key
-    COHERE_API_KEY=your_key
+    - GROQ_API_KEY=your_key
+    - HUGGINGFACE_API_KEY=your_key
+    - GOOGLE_API_KEY=your_key
+    - COHERE_API_KEY=your_key
 
 ## Run
 
-python groq_example.py
-python ollama_example.py
-python huggingface_example.py
-python gemini_example.py
-python cohere_example.py
+- python groq_example.py
+- python ollama_example.py
+- python huggingface_example.py
+- python gemini_example.py
+- python cohere_example.py
 
 ## Features
 - User input-based prompt system
