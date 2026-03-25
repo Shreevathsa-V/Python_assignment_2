@@ -16,7 +16,7 @@ def query_cohere(prompt):
 
     try:
         response = co.chat(
-            model="command-a-03-2025",   # latest model
+            model="command-a-03-2025",   
             message=prompt,
             temperature=0.7,
             max_tokens=300

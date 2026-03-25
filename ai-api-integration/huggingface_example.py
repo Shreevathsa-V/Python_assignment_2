@@ -6,7 +6,6 @@ load_dotenv()
 
 API_KEY = os.getenv("HUGGINGFACE_API_KEY")
 
-# ✅ Correct router endpoint
 API_URL = "https://router.huggingface.co/v1/chat/completions"
 
 
@@ -34,10 +33,7 @@ def query_huggingface(prompt):
 
         data = response.json()
 
-        # 🔍 DEBUG (optional)
-        # print(data)
-
-        # ✅ Case 1: Standard OpenAI format
+        # Case 1: Standard OpenAI format
         if "choices" in data:
             message = data["choices"][0].get("message", {})
 
@@ -54,15 +50,15 @@ def query_huggingface(prompt):
 
             return content
 
-        # ✅ Case 2: Some models return 'text'
+        # Case 2: Some models return 'text'
         if "choices" in data and "text" in data["choices"][0]:
             return data["choices"][0]["text"]
 
-        # ✅ Case 3: Direct text response
+        # Case 3: Direct text response
         if "text" in data:
             return data["text"]
 
-        # ✅ Case 4: fallback → show raw
+        # Case 4: fallback → show raw
         return f"No proper content. Raw response:\n{data}"
 
     except Exception as e:

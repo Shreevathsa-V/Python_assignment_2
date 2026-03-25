@@ -12,7 +12,7 @@ client = genai.Client(api_key=os.getenv("GOOGLE_API_KEY"))
 def query_gemini(prompt):
     try:
         response = client.models.generate_content(
-            model="gemini-3.1-flash-lite-preview",   # 🔥 CURRENT WORKING MODEL
+            model="gemini-3.1-flash-lite-preview",   
             contents=prompt
         )
 
